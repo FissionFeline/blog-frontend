@@ -1,9 +1,10 @@
 import axios from 'axios';
+import * as data from '../../config.json'
 
 class AuthService {
     login(user) {
         return axios
-            .post(process.env.api_url + 'login', {
+            .post(data.API + 'login', {
                 username: user.username,
                 password: user.password
             })
